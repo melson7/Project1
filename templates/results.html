@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Instagram Profile Analyzer Results</title>
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Analysis Results</h1>
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Fraud Score</th>
+                <th>Category</th>
+                <th>Posts</th>
+                <th>Followers</th>
+                <th>Following</th>
+            </tr>
+            {% for result in results %}
+            <tr>
+                <td>{{ result.username }}</td>
+                <td>{{ result.fraud_score }}</td>
+                <td>{{ result.category }}</td>
+                <td>{{ result.posts }}</td>
+                <td>{{ result.followers }}</td>
+                <td>{{ result.following }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/">Go back</a>
+    </div>
+</body>
+</html>
